@@ -1,6 +1,6 @@
 require "language/haskell"
 
-class AllureOfTheStars < Formula
+class Allureofthestars < Formula
   include Language::Haskell::Cabal
 
   desc "Near-future Sci-Fi roguelike and tactical squad combat game"
