@@ -21,10 +21,10 @@ class Allureofthestars < Formula
   test do
     system "#{bin}/Allure",
            "--dbgMsgSer",
-           "--logPriority 0",
            "--newGame 3",
            "--maxFps 100000",
            "--benchmark",
+           "--frontendNull",
            "--stopAfterFrames 2",
            "--automateAll",
            "--keepAutomated",
