@@ -19,17 +19,6 @@ class Allureofthestars < Formula
   end
 
   test do
-    system "#{bin}/Allure",
-           "--dbgMsgSer",
-           "--newGame 3",
-           "--maxFps 100000",
-           "--benchmark",
-           "--frontendNull",
-           "--stopAfterFrames 2",
-           "--automateAll",
-           "--keepAutomated",
-           "--gameMode battle",
-           "--setDungeonRng 7",
-           "--setMainRng 7"
+    system "#{bin}/Allure --dbgMsgSer ---dbgMsgCli -newGame 3 --benchmark --frontendNull --stopAfterFrames 1 --automateAll"
   end
 end
