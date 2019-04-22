@@ -25,7 +25,7 @@ class Allureofthestars < Formula
            "--newGame 3",
            "--maxFps 100000",
            "--benchmark",
-           "--stopAfterFrames 50",
+           "--stopAfterFrames 2",
            "--automateAll",
            "--keepAutomated",
            "--gameMode battle",
