@@ -19,6 +19,6 @@ class Allureofthestars < Formula
   end
 
   test do
-    assert_match "foo", shell_output("#{bin}/Allure --dbgMsgSer --dbgMsgCli --newGame 3 --benchmark --frontendNull --stopAfterFrames 1 --automateAll 2>&1")
+    assert_match "foo", pipe_output("#{bin}/Allure --dbgMsgSer --dbgMsgCli --newGame 3 --benchmark --frontendNull --stopAfterFrames 1 --automateAll 2>&1")
   end
 end
