@@ -19,6 +19,6 @@ class Allureofthestars < Formula
   end
 
   test do
-    assert_equal "foo", shell_output("#{bin}/Allure --dbgMsgSer --dbgMsgCli --newGame 3 --benchmark --frontendNull --stopAfterFrames 1 --automateAll 2>&1")
+    assert_equal "foo", shell_output("#{bin}/Allure --dbgMsgSer --dbgMsgCli --newGame 3 --benchmark --frontendNull --stopAfterFrames 0 2>&1; cat ~/.Allure/stdout.txt")
   end
 end
