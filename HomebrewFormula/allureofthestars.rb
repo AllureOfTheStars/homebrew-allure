@@ -19,6 +19,20 @@ class Allureofthestars < Formula
   end
 
   test do
-    assert_match "UI client FactionId 1 stopped", shell_output("#{bin}/Allure --dbgMsgSer --dbgMsgCli --newGame 3 --benchmark --frontendNull --stopAfterFrames 0 2>&1; cat ~/.Allure/stdout.txt")
+    system "#{bin}/Allure",
+           "--dbgMsgSer",
+           "--dbgMsgCli",
+           "--logPriority 0",
+           "--newGame 3",
+           "--maxFps 100000",
+           "--benchmark",
+           "--stopAfterFrames 50",
+           "--automateAll",
+           "--keepAutomated",
+           "--gameMode battle",
+           "--setDungeonRng 7",
+           "--setMainRng 7"
+    assert_equal "", shell_output("cat ~/.Allure/stderr.txt")
+    assert_match "UI client FactionId 1 stopped", shell_output("cat ~/.Allure/stdout.txt")
   end
 end
