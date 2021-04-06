@@ -6,7 +6,7 @@ class Allureofthestars < Formula
   desc "Near-future Sci-Fi roguelike and tactical squad combat game"
   homepage "https://www.allureofthestars.com/"
   url "https://hackage.haskell.org/package/Allure-0.10.2.0/Allure-0.10.2.0.tar.gz"
-  sha256 ""
+  sha256 "fcb9f38ea543d3277fa90eee004f7624d1168bf7f2c17902cda1870293b7c2f4"
   head "https://github.com/AllureOfTheStars/Allure.git"
 
   depends_on "cabal-install" => :build
