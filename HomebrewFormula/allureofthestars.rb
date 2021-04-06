@@ -4,7 +4,7 @@ class Allureofthestars < Formula
   include Language::Haskell::Cabal
 
   desc "Near-future Sci-Fi roguelike and tactical squad combat game"
-  homepage "http://allureofthestars.com"
+  homepage "https://www.allureofthestars.com/"
   url "https://hackage.haskell.org/package/Allure-0.9.5.0/Allure-0.9.5.0.tar.gz"
   sha256 "8180fe070633bfa5515de8f7443421044e7ad4ee050f0a92c048cec5f2c88132"
   head "https://github.com/AllureOfTheStars/Allure.git"
@@ -19,9 +19,8 @@ class Allureofthestars < Formula
   end
 
   test do
-    play_args = "--maxFps 100000 --stopAfterFrames 50 --automateAll --keepAutomated"
-    misc_args = "--logPriority 0 --newGame 3 --gameMode battle --setDungeonRng 7 --setMainRng 7"
-    output = shell_output("#{bin}/Allure --dbgMsgSer --dbgMsgCli #{play_args} #{misc_args}")
+    non_debug_args = "--logPriority 0 --newGame 3 --maxFps 100000 --stopAfterFrames 50 --automateAll --keepAutomated --gameMode battle --setDungeonRng 7 --setMainRng 7"
+    output = shell_output("#{bin}/Allure --dbgMsgSer --dbgMsgCli #{non_debug_args}")
     assert_equal "", output
     assert_equal "", shell_output("cat ~/.Allure/stderr.txt")
     assert_match "UI client FactionId 1 stopped", shell_output("cat ~/.Allure/stdout.txt")
